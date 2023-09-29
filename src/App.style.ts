@@ -1,6 +1,13 @@
 import styled, {createGlobalStyle} from "styled-components";
 
 
+type Props ={
+    color?: string;
+    bg?:string;
+    bdbox?:string;
+    gc?:string;
+}
+
 type Theme = {
     theme: string;
 }
@@ -74,7 +81,7 @@ export const Switcher = styled.div<Theme>`
     background-color: var(--key-background-red);
     border-radius: 2rem;
     position: absolute;
-    left: ${(props) => props.theme};
+    left: ${(Props) => Props.theme};
     top: 17%;
     transition: all 0.1s linear;
 
